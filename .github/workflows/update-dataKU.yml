@@ -59,7 +59,7 @@ jobs:
 
       - name: Push changes
         uses: ad-m/github-push-action@master
-        if: steps.commit-binance-changes.outcome == 'success' || steps.commit-kucoin-changes.outcome == 'success'
+        if: steps.commit-kucoin-changes.outcome == 'success'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
