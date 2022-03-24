@@ -51,7 +51,7 @@ jobs:
         continue-on-error: true
         run: |
           git add binance/*.json.gz
-          git commit -a -m "Update Binance exchange data from ${{ steps.binance-dates.outputs.start_date }} to ${{ steps.binance-dates.outputs.end_date 
+          git commit -a -m "Update Binance exchange data from ${{ steps.binance-dates.outputs.start_date }} to ${{ steps.binance-dates.outputs.end_date }}"
       - name: Push changes
         uses: ad-m/github-push-action@master
         if: steps.commit-binance-changes.outcome == 'success' || steps.commit-kucoin-changes.outcome == 'success'
