@@ -54,7 +54,7 @@ jobs:
           git commit -a -m "Update Binance exchange data from ${{ steps.binance-dates.outputs.start_date }} to ${{ steps.binance-dates.outputs.end_date }}"
       - name: Push changes
         uses: ad-m/github-push-action@master
-        if: steps.commit-binance-changes.outcome == 'success' || steps.commit-kucoin-changes.outcome == 'success'
+        if: steps.commit-binance-changes.outcome == 'success'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
