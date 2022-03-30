@@ -1,4 +1,4 @@
-name: Update Data
+name: Update Data KU
 
 on: [push,workflow_dispatch]
 
